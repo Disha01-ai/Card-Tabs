@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="shah384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+
+    <style type="text/css">
+        .container .tab {
+            width: 100%;
+            padding: 20px;
+            order: 1;
+            display: none;
+            background: white;
+        }
+
+        .active {
+            border: 1px solid #b0bec5 !important;
+            margin: 3px !important;
+            border-radius: 4px !important;
+            line-height: 100% !important;
+            padding: 12px 20px !important;
+            cursor: pointer !important;
+            text-align: center !important;
+            font-weight: 600 !important;
+            font-size: 16px !important;
+            justify-content: center !important;
+            background-color: #f23e36 !important;
+            color: white !important;
+        }
+
+
+        @media only screen and (max-width:680px) {
+            .btn {
+                justify-content: center;
+                width: 100%;
+                margin-top: 10px;
+                text-align: center;
+                background-color: transparent;
+                border: 1px solid rgba(207, 216, 220, 0.3);
+                border-radius: 4px;
+                color: tomato;
+                backdrop-filter: blur(4px);
+                font-weight: bold;
+            }
+
+            #disc {
+                margin: auto;
+                display: block;
+                color: black;
+                border-radius: 4px;
+                font-weight: 600;
+                font-size: 16px;
+                text-align: center;
+                justify-content: center;
+                background-color: #fff;
+                line-height: 100%;
+                padding: 12px 20px;
+                margin: 1px;
+                cursor: pointer;
+
+            }
+
+            #disc button {
+                width: 100%;
+            }
+
+            .active {
+                border: 1px solid #b0bec5;
+                margin: 3px;
+                border-radius: 4px;
+                line-height: 100%;
+                padding: 12px 20px;
+                cursor: pointer;
+                text-align: center;
+                font-weight: 600;
+                font-size: 16px;
+                justify-content: center;
+                background-color: #f23e36;
+                color: white;
+                width: 100%;
+            }
+        }
+    </style>
+    <script type="text/javascript">function counsellor() {
+            document.getElementById('counsellor').style.display = "block";
+            document.getElementById('professionals').style.display = "none";
+            document.getElementById('psychometric').style.display = "none";
+            document.getElementById('studyabroad').style.display = "none";
+            document.getElementById('class10').style.display = "none";
+            document.getElementById('class1112').style.display = "none";
+            document.getElementById('tabsprofessionals').classList.remove("active");
+            document.getElementById('tabspsychometric').classList.remove("active");
+            document.getElementById('tabsstudyabroad').classList.remove("active");
+            document.getElementById('tabsCounsellors').classList.add("active");
+            document.getElementById('tabsclass1112').classList.remove("active");
+            document.getElementById('tabsclass10').classList.remove("active");
+
+            console.log("insidecounsellor");
+        }
+        function professionals() {
+            document.getElementById('professionals').style.display = "block";
+            document.getElementById('counsellor').style.display = "none";
+            document.getElementById('psychometric').style.display = "none";
+            document.getElementById('studyabroad').style.display = "none";
+            document.getElementById('class10').style.display = "none";
+            document.getElementById('class1112').style.display = "none";
+            document.getElementById('tabsprofessionals').classList.add("active");
+            document.getElementById('tabspsychometric').classList.remove("active");
+            document.getElementById('tabsstudyabroad').classList.remove("active");
+            document.getElementById('tabsclass10').classList.remove("active");
+            document.getElementById('tabsCounsellors').classList.remove("active");
+            document.getElementById('tabsclass1112').classList.remove("active");
+            console.log("insideprofessionals");
+        }
+        function psychometric() {
+            document.getElementById('psychometric').style.display = "block";
+            document.getElementById('counsellor').style.display = "none";
+            document.getElementById('professionals').style.display = "none";
+            document.getElementById('studyabroad').style.display = "none";
+            document.getElementById('class10').style.display = "none";
+            document.getElementById('class1112').style.display = "none";
+            document.getElementById('tabsprofessionals').classList.remove("active");
+            document.getElementById('tabspsychometric').classList.add("active");
+            document.getElementById('tabsstudyabroad').classList.remove("active");
+            document.getElementById('tabsclass10').classList.remove("active");
+            document.getElementById('tabsCounsellors').classList.remove("active");
+            document.getElementById('tabsclass1112').classList.remove("active");
+            console.log("insidepsychometric");
+        }
+        function studyabroad() {
+            document.getElementById('studyabroad').style.display = "block";
+            document.getElementById('counsellor').style.display = "none";
+            document.getElementById('professionals').style.display = "none";
+            document.getElementById('psychometric').style.display = "none";
+            document.getElementById('class10').style.display = "none";
+            document.getElementById('class1112').style.display = "none";
+            document.getElementById('tabsprofessionals').classList.remove("active");
+            document.getElementById('tabspsychometric').classList.remove("active");
+            document.getElementById('tabsstudyabroad').classList.add("active");
+            document.getElementById('tabsclass10').classList.remove("active");
+            document.getElementById('tabsCounsellors').classList.remove("active");
+            document.getElementById('tabsclass1112').classList.remove("active");
+            console.log("insidestudyabroad");
+        }
+        function class10() {
+            document.getElementById('class10').style.display = "block";
+            document.getElementById('counsellor').style.display = "none";
+            document.getElementById('professionals').style.display = "none";
+            document.getElementById('psychometric').style.display = "none";
+            document.getElementById('studyabroad').style.display = "none";
+            document.getElementById('class1112').style.display = "none";
+            document.getElementById('tabsprofessionals').classList.remove("active");
+            document.getElementById('tabspsychometric').classList.remove("active");
+            document.getElementById('tabsstudyabroad').classList.remove("active");
+            document.getElementById('tabsCounsellors').classList.remove("active");
+            document.getElementById('tabsclass10').classList.add("active");
+            document.getElementById('tabsclass1112').classList.remove("active");
+            console.log("insideclass10");
+        }
+        function class1112() {
+            document.getElementById('class1112').style.display = "block";
+            document.getElementById('counsellor').style.display = "none";
+            document.getElementById('professionals').style.display = "none";
+            document.getElementById('psychometric').style.display = "none";
+            document.getElementById('studyabroad').style.display = "none";
+            document.getElementById('class10').style.display = "none";
+            document.getElementById('tabsprofessionals').classList.remove("active");
+            document.getElementById('tabspsychometric').classList.remove("active");
+            document.getElementById('tabsstudyabroad').classList.remove("active");
+            document.getElementById('tabsCounsellors').classList.remove("active");
+            document.getElementById('tabsclass10').classList.remove("active");
+            document.getElementById('tabsclass1112').classList.add("active");
+            console.log("insideclass1112");
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container" style=" display: flex;flex-wrap: wrap;max-width: 1100px;padding: 25px;">
+        <div id="disc" style="margin: auto; display: block;">
+            <button class="active" style=" border: 1px solid #b0bec5;
+            color: black;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            justify-content: center;
+            background-color: #fff;
+            line-height: 100%;
+            padding: 12px 20px;
+            margin: 3px;
+            cursor: pointer;" id="tabsCounsellors" name="mytabs" onclick="counsellor()">Counsellors</button>
+            <button id="tabsprofessionals" style=" border: 1px solid #b0bec5;
+            color: black;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            justify-content: center;
+            background-color: #fff;
+            line-height: 100%;
+            padding: 12px 20px;
+            margin: 3px;
+            cursor: pointer;" name="mytabs" onclick="professionals()">Working-Professionals</button>
+            <button id="tabspsychometric" style=" border: 1px solid #b0bec5;
+            color: black;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            justify-content: center;
+            background-color: #fff;
+            line-height: 100%;
+            padding: 12px 20px;
+            margin: 3px;
+            cursor: pointer;" name="mytabs" onclick="psychometric()">For College</button>
+            <button id="tabsstudyabroad" style=" border: 1px solid #b0bec5;
+            color: black;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            justify-content: center;
+            background-color: #fff;
+            line-height: 100%;
+            padding: 12px 20px;
+            margin: 3px;
+            cursor: pointer;" name="mytabs" onclick="studyabroad()">Study Abroad</button>
+            <button id="tabsclass10" style=" border: 1px solid #b0bec5;
+            color: black;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            justify-content: center;
+            background-color: #fff;
+            line-height: 100%;
+            padding: 12px 20px;
+            margin: 3px;
+            cursor: pointer;" name="mytabs" onclick="class10()">Class10</button>
+            <button id="tabsclass1112" style=" border: 1px solid #b0bec5;
+            color: black;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            justify-content: center;
+            background-color: #fff;
+            line-height: 100%;
+            padding: 12px 20px;
+            margin: 3px;
+            cursor: pointer;" name="mytabs" onclick="class1112()">Class 11&12</button>
+
+        </div>
+        <div class="tabs" id="counsellor">
+            <div class="row slider">
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Become Master With CG.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            BECOME A MASTER WITH CAREERGUIDE </h2>
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> <s>
+                                43,999</s> Rs. 10,000</i>
+                        <a href="https://www.careerguide.com/career/become-a-master-career-guide">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/College Admission Service Abroad.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            CERTIFICATION COURSE FOR GUIDING SCHOOL STUDENTS </h2>
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 16
+                            Lessons</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign" style=" margin-right: 30px;font-size: 14px;color: #45526c;">
+                            15,000</i>
+                        <a
+                            href="https://www.careerguide.com/career/certification-course-for-guiding-school-students-online">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Delhi University.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            CERTIFICATION COURSE FOR GRADUATES AND POSTGRADUATES </h2>
+                        <hr style="margin-top: -10px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 24+
+                            Lessons</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign" style=" margin-right: 30px;font-size: 14px;color: #45526c;">
+                            15,000</i>
+                        <a
+                            href="https://www.careerguide.com/career/certification-course-for-guiding-graduates-post-graduates">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Personal Branding.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            PERSONAL BRANDING & SALES FOR CAREER COUNSELLORS </h2>
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 10
+                            Lessons</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign" style=" margin-right: 30px;font-size: 14px;color: #45526c;">
+                            5,000</i>
+                        <a href="https://www.careerguide.com/career/personal-branding-sales-for-career-counsellors">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Masterclass wokring.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            CERTIFICATION COURSE FOR GUIDING WORKING PROFESSIONAL </h2>
+
+                        <hr style="margin-top: -10px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 14
+                            Lessons</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign" style=" margin-right: 30px;font-size: 14px;color: #45526c;">
+                            10,000</i>
+                        <a
+                            href="https://www.careerguide.com/career/certification-course-for-guiding-working-professionals">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/businesspeople-having-discussion-office.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            CAREER COUNSELLOR'S POWER-UP PACKAGE </h2>
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign" style=" margin-right: 30px;font-size: 14px;color: #45526c;">
+                            <s>1,50,000 </s> Rs.1,00,000</i>
+                        <a href="https://www.careerguide.com/career/career-counsellors-powerup-package">
+                            <button style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="tab" id="professionals">
+            <div class="row slider">
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Masterclass wokring.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Master class for working professionals </h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 16
+                            Lessons</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> <s>
+                                65,000</s> Rs. 10,000</i>
+                        <a href="https://www.careerguide.com/career/masterclass-for-working-professionals">
+                            <button style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Working.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Linkedin & Resume service</h2>
+
+                        <hr style="margin-top: 40px;" style=" margin-right: 30px;font-size: 14px;color: #45526c;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 16
+                            Lessons</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign" style=" margin-right: 30px;font-size: 14px;color: #45526c;">
+                            15,000</i>
+                        <a href="https://www.careerguide.com/career/linkedin-resume-review-services">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Startup.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            starting up guidance </h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 16
+                            Lessons</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign" style=" margin-right: 30px;font-size: 14px;color: #45526c;">
+                            10,000</i>
+                        <a href="https://www.careerguide.com/career/startingup-guidance">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Career Job Switch.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            career job switch guidance </h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 16
+                            Lessons</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign" style=" margin-right: 30px;font-size: 14px;color: #45526c;">
+                            <s>30,000 </s> Rs.20,000</i>
+                        <a href="https://www.careerguide.com/career/career-job-switch">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Higher Education Guidance India.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Higher Education Guidance India </h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 16
+                            Lessons</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-1,00,000</i>
+                        <a href="https://www.careerguide.com/career/masterclass-for-working-professionals">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Higher Education Guidance Abroad.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Higher Education Guidance Abroad </h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 16
+                            Lessons</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-1,00,000</i>
+                        <a href="https://www.careerguide.com/career/abroad-studies">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="tab" id="psychometric">
+            <div class="row slider">
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Resume Interview.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Resume Interview </h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <a href="https://www.careerguide.com/career/resume-professional-review">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Higher Education Service India.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Higher Eductation Service India </h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Higher Education Service Abroad.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Higher Eductation Service Abroad </h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Internship Service.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Guarantee Internships Service</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Job Guarantee.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Job Guarantee Service</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Hunt tool.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Job Hunt Tool Kit For college Student </h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Placement and readyness.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Masterclass And Placement Readyness</h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Career clarity.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Career Clearity Service </h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tab" id="studyabroad">
+            <div class="row slider">
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/USA.png"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Study Abroad In USA</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <a href="https://www.careerguide.com/career/study-abroad-in-usa">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Australia.png"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Study Abroad In Australia</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <a href="https://www.careerguide.com/career/study-abroad-in-australia">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Australia.png"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Study Abroad In NEWZEALAND</h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <a href="https://www.careerguide.com/career/study-abroad-in-newzealand">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Flag_of_Singapore.svg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Study Abroad In SINGAPORE</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <a href="https://www.careerguide.com/career/study-abroad-in-singapore">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/IRELAND.jfif"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Study Abroad In IRELAND</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <a href="https://www.careerguide.com/career/study-abroad-in-ireland">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/uk.png"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Study Aborad In UK</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <a href="https://www.careerguide.com/career/study-abroad-in-uk">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Canada.png"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Study Aborad In Canada</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <a href="https://www.careerguide.com/career/study-abroad-in-canada">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/EUROPE.png"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Study Aborad In EUROPE</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <a href="https://www.careerguide.com/career/study-abroad-in-europe">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Dubai.png"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Study Aborad In DUBAI</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <a href="https://www.careerguide.com/career/study-abroad-in-dubai">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Hongkong.png"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Study Aborad In HONGKONG</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <a href="https://www.careerguide.com/career/study-abroad-in-hongkong">
+                            <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                                <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab" id="class10">
+            <div class="row slider">
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Stream And Clarity Service.jpg"
+                            style="width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Stream and Clarity Service </h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/stream-selector.jpg"
+                            style="width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Stream Selector Test</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Awarness.jpg"
+                            style="width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Stream, Career, College Awarness Service</h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Profile building.jpg"
+                            style="width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Profile Building Service For Abroad Admission </h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tab" id="class1112">
+            <div class="row slider">
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Profile building.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Profile Building Service For Abroad Admission</h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/College Admission service India.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Colleged Admission Service India </h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/College Admission Service Abroad.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Colleged Admission Service Abroad</h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Internship Service.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Guarantee Internships Service </h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Career Clarity Arts.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Career Clarity Service for Arts </h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;" style=" margin-right: 30px;font-size: 14px;color: #45526c;">VIEW
+                            PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Career Clarity Humanities.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Career Clarity Service for Humanities </h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Career Clarity commerce.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Career Clarity Service for Commerce </h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Career Clarity Science.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Career Clarity Service for Science(Maths) </h2>
+
+                        <hr style="margin-top: 20px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                         <i class="fas fa-rupee-sign"  style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Career Clarity Biology.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Career Clarity Service for Biology</h2>
+
+                        <hr style="margin-top: 20px;" style=" margin-right: 30px;font-size: 14px;color: #45526c;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"  style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Engineering Admission Service.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            engineering admission service </h2>
+
+                        <hr style="margin-top: 40px;" style=" margin-right: 30px;font-size: 14px;color: #45526c;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign" style=" margin-right: 30px;font-size: 14px;color: #45526c;">
+                            Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/MBBS Admission.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            MBBS Admissions </h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Law Admission.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            LAW Admission </h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/BBA Admisision.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            BBA Admission </h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                            color: tomato;
+                            backdrop-filter: blur(4px);
+                            font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="details"
+                        style=" margin: 50px 0;background-color: #ffff;padding: 20px 10px;border-radius: 10px;height: 360px;border: 2px solid rgba(207, 216, 220, 0.3);">
+                        <img src="images/Delhi University.jpg"
+                            style="   width: 107%; height: 130px; margin-left: -11px; margin-top: -20px; border-top-left-radius: 9px; border-top-right-radius: 9px;">
+                        <h2
+                            style="font-style: normal;width: inherit;font-size: 18px;text-transform: capitalize;font-weight: bold;line-height: 120%;flex-direction: column;padding: 2px 16px;color: #222222;margin-top: 15px;text-decoration: none;">
+                            Delhi University Admission</h2>
+
+                        <hr style="margin-top: 40px;">
+                        <i class="fas fa-book-open" style=" margin-right: 30px;font-size: 14px;color: #45526c;"> 18
+                            months</i>
+                        <i class="fas fa-users" style=" margin-right: 30px;font-size: 14px;color: #45526c;">1-1
+                            Mentorship & Job Support</i>
+                        <i class="fas fa-rupee-sign"
+                            style=" margin-right: 30px;font-size: 14px;color: #45526c;">Cost-Of-Service-10,000</i>
+                        <button class="btn" style="justify-content: center;width: 100%;margin-top: 10px;text-align: center;background-color: transparent;border: 1px solid rgba(207, 216, 220, 0.3);border-radius: 4px;
+                        color: tomato;
+                        backdrop-filter: blur(4px);
+                        font-weight: bold;">VIEW PROGRAM
+                            <i class="fas fa-arrow-right" style=" color: tomato;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/66c65080a6.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+
+</html>
